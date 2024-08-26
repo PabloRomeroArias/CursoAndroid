@@ -8,7 +8,6 @@ import com.devepoler.cursoandroid.kotlin.core.data.cinema.Seat
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.SeatInputResult
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.SeatState
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.Session
-import com.devepoler.cursoandroid.kotlin.core.data.cinema.Week
 import com.devepoler.cursoandroid.kotlin.core.provider.WeekProvider
 
 val WEEK = WeekProvider.getWeek()
@@ -49,7 +48,7 @@ fun getDayOfWeekFromInput(op : Int?) : DayOfWeek {
 fun chooseMovie(dayOfWeek : DayOfWeek) {
     val day = WEEK.schedule[dayOfWeek] ?: return
 
-    val maxOptionValue = day.sessionHashMap.size + 2
+    val maxOptionValue = day.sessionList.size + 2
 
     var option : Int?
 
@@ -68,9 +67,9 @@ fun chooseMovie(dayOfWeek : DayOfWeek) {
 fun getSessionFromRoomNumber(day : Day, option : Int?) : Session? {
     if (option == null) return null
 
-    for ((room, movie) in day.sessionHashMap.entries) {
-        if (room.number == option)
-            return Session(room, movie)
+    for (session in day.sessionList) {
+        if (session.room.number == option)
+            return session
     }
     return null
 }
@@ -220,8 +219,8 @@ fun printChooseMovieMessage(day : Day?) {
     var counter = 1
     var message = "\n${day.dayOfWeek}\n"
 
-    for ((room, movie) in day.sessionHashMap.entries) {
-        message += "${room.number}.- $movie.\n"
+    for (session in day.sessionList) {
+        message += "${session.room.number}.- ${session.movie}.\n"
         counter++
     }
 
