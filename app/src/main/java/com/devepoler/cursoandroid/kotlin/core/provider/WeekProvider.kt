@@ -7,6 +7,7 @@ import com.devepoler.cursoandroid.kotlin.core.data.cinema.Room
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.Row
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.Seat
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.SeatState
+import com.devepoler.cursoandroid.kotlin.core.data.cinema.Session
 import com.devepoler.cursoandroid.kotlin.core.data.cinema.Week
 
 class WeekProvider {
@@ -30,11 +31,10 @@ class WeekProvider {
         private fun getMonday(): Day {
             return Day(
                 DayOfWeek.Monday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("DeadPool"),
-                    Room(2, getRowList()) to Movie("Doraemon"),
-                    Room(3, getRowList()) to Movie("Saw")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("DeadPool")),
+                    Session(Room(2, getRowList()), Movie("Doraemon")),
+                    Session(Room(3, getRowList()), Movie("Saw"))
                 )
             )
         }
@@ -42,11 +42,10 @@ class WeekProvider {
         private fun getTuesday(): Day {
             return Day(
                 DayOfWeek.Tuesday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }
@@ -54,11 +53,10 @@ class WeekProvider {
         private fun getWednesday(): Day {
             return Day(
                 DayOfWeek.Wednesday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }
@@ -66,11 +64,10 @@ class WeekProvider {
         private fun getThursday(): Day {
             return Day(
                 DayOfWeek.Thursday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }
@@ -78,11 +75,10 @@ class WeekProvider {
         private fun getFriday(): Day {
             return Day(
                 DayOfWeek.Friday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }
@@ -90,11 +86,10 @@ class WeekProvider {
         private fun getSaturday(): Day {
             return Day(
                 DayOfWeek.Saturday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }
@@ -102,11 +97,10 @@ class WeekProvider {
         private fun getSunday(): Day {
             return Day(
                 DayOfWeek.Sunday,
-                sortedMapOf(
-                    compareBy { it.number },
-                    Room(1, getRowList()) to Movie("Fast and Furious"),
-                    Room(2, getRowList()) to Movie("Spiderman"),
-                    Room(3, getRowList()) to Movie("Rompiendo el círculo")
+                listOf(
+                    Session(Room(1, getRowList()), Movie("Fast and Furious")),
+                    Session(Room(2, getRowList()), Movie("Spiderman")),
+                    Session(Room(3, getRowList()), Movie("Rompiendo el círculo"))
                 )
             )
         }

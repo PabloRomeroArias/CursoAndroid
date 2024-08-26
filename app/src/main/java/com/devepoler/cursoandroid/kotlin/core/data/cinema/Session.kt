@@ -13,14 +13,12 @@ class Session(
             row.seatList.forEach { seat ->
                 val realSeat = room.getSeatByRowAndSeatNumber(row.number, seat.number)
 
-                return if (canFillSeat(realSeat)) {
+                if (canFillSeat(realSeat)) {
                     // !! asegura que no va a ser nulo
-                    if (room.fillSeat(row, realSeat!!)) {
-                        true
-                    } else
-                        false
+                    if (!room.fillSeat(row, realSeat!!))
+                        return false
                 } else
-                    false
+                    return false
             }
         }
         return true
