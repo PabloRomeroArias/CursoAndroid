@@ -12,6 +12,7 @@ class Session(
         fakeRoom.rowList.forEach { row ->
             row.seatList.forEach { seat ->
                 val realSeat = room.getSeatByRowAndSeatNumber(row.number, seat.number)
+                val arealSeat = room.getSeatByRowAndSeatNumber(row.number, seat.number)
 
                 if (canFillSeat(realSeat)) {
                     // !! asegura que no va a ser nulo
