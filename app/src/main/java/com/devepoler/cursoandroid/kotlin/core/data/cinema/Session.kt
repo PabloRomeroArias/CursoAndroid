@@ -21,7 +21,7 @@ class Session(
                     return false
             }
         }
-        return true
+        return false
     }
 
     private fun canFillSeat(seat : Seat?) =
