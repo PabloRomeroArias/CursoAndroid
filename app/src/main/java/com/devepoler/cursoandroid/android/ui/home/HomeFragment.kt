@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.ui
+package com.devepoler.cursoandroid.android.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.devepoler.cursoandroid.databinding.FragmentSecondBinding
+import com.devepoler.cursoandroid.databinding.FragmentHomeBinding
 
-class SecondFragment : Fragment() {
-    private val binding by lazy { FragmentSecondBinding.inflate(layoutInflater) }
-    private val args : SecondFragmentArgs by navArgs()
+class HomeFragment : Fragment() {
+    private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
+    private val args : HomeFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +21,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvName.text = args.name
+        binding.tvName.text = "Hola, ${args.name ?: "Invitado"}"
     }
 
 }

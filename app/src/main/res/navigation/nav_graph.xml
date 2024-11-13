@@ -8,22 +8,23 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.devepoler.cursoandroid.android.ui.FirstFragment"
+        android:name="com.devepoler.cursoandroid.android.ui.login.LoginFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.devepoler.cursoandroid.android.ui.SecondFragment"
+        android:name="com.devepoler.cursoandroid.android.ui.home.HomeFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_home">
 
         <argument
             android:name="name"
             app:argType="string"
-            android:defaultValue="DevePoler"/>
+            android:defaultValue="DevePoler"
+            app:nullable="true"/>
     </fragment>
 </navigation>
