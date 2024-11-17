@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.devepoler.cursoandroid.R
 import com.devepoler.cursoandroid.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -21,7 +22,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvName.text = "Hola, ${args.name ?: "Invitado"}"
+        binding.tvName.text = getString(R.string.home_welcome, args.name ?: "Invitado",)
     }
 
 }
