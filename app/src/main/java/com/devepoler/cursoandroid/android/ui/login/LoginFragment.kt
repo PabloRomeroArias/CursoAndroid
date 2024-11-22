@@ -38,8 +38,10 @@ class LoginFragment : Fragment() {
                 }
             }
 
-            btGuess.setOnClickListener { navToHomeFragment() }
-
+            with(btGuess) {
+                setOnClickListener { navToHomeFragment() }
+                performClick()
+            }
         }
     }
 

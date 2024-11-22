@@ -1,13 +1,29 @@
 <resources>
     <!-- General -->
     <string name="app_name">CursoAndroid</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="back">Atrás</string>
+    <string name="confirm">Confirmar</string>
 
     <!-- Login -->
     <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
+    <string name="hint_password">Contraseña</string>
     <string name="text_bt_login">Login</string>
-    <string name="text_bt_guess">Guess</string>
+    <string name="text_bt_guess">Invitado</string>
 
     <!-- Home -->
-    <string name="home_welcome">Hi, %1$s</string>
+    <string name="home_welcome">Hola, %1$s</string>
+    <string name="home_dialog_title">Título</string>
+    <string name="home_dialog_message">Mensaje</string>
+
+    <string name="fruit_title">Fruta favorita</string>
+    <string name="fruits_title">Frutas favoritas</string>
+    <string-array name="fruits">
+        <item>Plátano</item>
+        <item>Melón</item>
+        <item>Sandía</item>
+        <item>Manzana</item>
+        <item>Pera</item>
+    </string-array>
 </resources>
