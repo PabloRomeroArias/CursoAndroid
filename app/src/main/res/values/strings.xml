@@ -26,4 +26,7 @@
         <item>Manzana</item>
         <item>Pera</item>
     </string-array>
+
+    <string name="time_picker_title">Selecciona hora</string>
+    <string name="date_picker_title">Selecciona fecha</string>
 </resources>
