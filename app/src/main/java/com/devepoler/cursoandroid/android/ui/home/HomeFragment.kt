@@ -5,17 +5,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.util.forEach
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.devepoler.cursoandroid.R
+import com.devepoler.cursoandroid.android.ui.extension.toast
 import com.devepoler.cursoandroid.android.ui.util.DialogUtil
 import com.devepoler.cursoandroid.databinding.FragmentHomeBinding
+import com.google.android.material.timepicker.TimeFormat
+import java.util.Locale
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
+    private val viewModel : HomeViewModel by viewModels()
     private val args : HomeFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -36,7 +40,7 @@ class HomeFragment : Fragment() {
         showDialog()
     }
 
-    private fun showDialog() { showMultipleChoiceDialog() }
+    private fun showDialog() { showDatePickerDialog() }
 
     private fun showSimpleDialog() {
         DialogUtil.showSimpleMaterialDialog(
@@ -50,7 +54,7 @@ class HomeFragment : Fragment() {
                     DialogInterface.BUTTON_NEUTRAL -> "neutral"
                     else -> "desconocido"
                 }
-                Toast.makeText(context, "Pulsado $message", Toast.LENGTH_SHORT).show()
+                requireContext().toast("Pulsado $message")
             }
         )
     }
@@ -63,7 +67,7 @@ class HomeFragment : Fragment() {
 
                 val fruit = listView.adapter.getItem(listView.checkedItemPosition) as String
 
-                Toast.makeText(requireContext(), fruit, Toast.LENGTH_SHORT).show()
+                requireContext().toast(fruit)
             }
         )
     }
@@ -79,8 +83,30 @@ class HomeFragment : Fragment() {
                 checkedItemPositions.forEach { key, _ ->
                     favouriteFruitList.add(fruitList[key])
                 }
-                Toast.makeText(requireContext(), favouriteFruitList.toString(), Toast.LENGTH_SHORT).show()
+                requireContext().toast(favouriteFruitList.toString())
             }
+        )
+    }
+
+    private fun showTimePickerDialog() {
+        DialogUtil.showTimePickerDialog(
+            childFragmentManager,
+            R.string.time_picker_title,
+            22,
+            30,
+            TimeFormat.CLOCK_24H
+        ) { h, m ->
+            val message = String.format(Locale.getDefault(), "%02d:%02d", h, m)
+
+            requireContext().toast(message)
+        }
+    }
+
+    private fun showDatePickerDialog() {
+        DialogUtil.showDatePickerDialog(
+            childFragmentManager,
+            R.string.date_picker_title,
+            viewModel.getBounds()
         )
     }
 }

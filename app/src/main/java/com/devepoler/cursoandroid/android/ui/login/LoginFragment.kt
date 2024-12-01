@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.devepoler.cursoandroid.android.data.LoginResponse
 import com.devepoler.cursoandroid.android.data.bo.LoginFormBo
+import com.devepoler.cursoandroid.android.ui.extension.toast
 import com.devepoler.cursoandroid.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -29,11 +29,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btLogin.setOnClickListener {
                 when (val response = viewmodel.login(getLoginFormBo())) {
-                    is LoginResponse.Error -> Toast.makeText(
-                        root.context,
-                        response.msg,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    is LoginResponse.Error -> root.context.toast(response.msg)
                     is LoginResponse.Success -> navToHomeFragment(response.user.name)
                 }
             }
