@@ -29,4 +29,6 @@
 
     <string name="time_picker_title">Selecciona hora</string>
     <string name="date_picker_title">Selecciona fecha</string>
+    <string name="selected_time">Hora seleccionada -> %1$s</string>
+    <string name="selected_date">Fecha seleccionada -> %1$s</string>
 </resources>

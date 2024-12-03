@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.ui.util
+package com.devepoler.cursoandroid.android.core.util
 
 import android.content.Context
 import android.content.DialogInterface
@@ -6,7 +6,7 @@ import androidx.annotation.ArrayRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.FragmentManager
 import com.devepoler.cursoandroid.R
-import com.devepoler.cursoandroid.android.ui.extension.toast
+import com.devepoler.cursoandroid.android.core.extension.toast
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -89,13 +89,16 @@ class DialogUtil {
         fun showDatePickerDialog(
             manager : FragmentManager,
             @StringRes restTitle : Int,
-            bounds : CalendarConstraints
+            bounds : CalendarConstraints,
+            onClick: (date : Long) -> Unit
         ) {
             val picker =
                 MaterialDatePicker.Builder.datePicker()
                     .setTitleText(restTitle)
                     .setCalendarConstraints(bounds)
                     .build()
+
+            picker.addOnPositiveButtonClickListener { onClick(it) }
 
             picker.show(manager, null)
         }

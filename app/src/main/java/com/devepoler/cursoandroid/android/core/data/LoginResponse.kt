@@ -1,6 +1,6 @@
-package com.devepoler.cursoandroid.android.data
+package com.devepoler.cursoandroid.android.core.data
 
-import com.devepoler.cursoandroid.android.data.bo.UserBo
+import com.devepoler.cursoandroid.android.core.data.bo.UserBo
 
 sealed interface LoginResponse {
     data class Success(val user: UserBo) : LoginResponse
