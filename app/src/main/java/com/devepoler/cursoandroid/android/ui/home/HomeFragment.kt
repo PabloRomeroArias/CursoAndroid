@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.devepoler.cursoandroid.R
-import com.devepoler.cursoandroid.android.ui.extension.toast
-import com.devepoler.cursoandroid.android.ui.util.DialogUtil
+import com.devepoler.cursoandroid.android.core.extension.toast
+import com.devepoler.cursoandroid.android.core.util.DateUtil
+import com.devepoler.cursoandroid.android.core.util.DialogUtil
 import com.devepoler.cursoandroid.databinding.FragmentHomeBinding
 import com.google.android.material.timepicker.TimeFormat
-import java.util.Locale
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
@@ -36,11 +36,10 @@ class HomeFragment : Fragment() {
 
             root.setOnClickListener { showDialog() }
         }
-
         showDialog()
     }
 
-    private fun showDialog() { showDatePickerDialog() }
+    private fun showDialog() { showTimePickerDialog() }
 
     private fun showSimpleDialog() {
         DialogUtil.showSimpleMaterialDialog(
@@ -96,9 +95,10 @@ class HomeFragment : Fragment() {
             30,
             TimeFormat.CLOCK_24H
         ) { h, m ->
-            val message = String.format(Locale.getDefault(), "%02d:%02d", h, m)
 
-            requireContext().toast(message)
+            val timeString = DateUtil.parseHourMinToString(h, m)
+
+            requireContext().toast(R.string.selected_time, timeString)
         }
     }
 
@@ -106,7 +106,13 @@ class HomeFragment : Fragment() {
         DialogUtil.showDatePickerDialog(
             childFragmentManager,
             R.string.date_picker_title,
-            viewModel.getBounds()
-        )
+            viewModel.getBounds(),
+        ) { millis ->
+            val dateString = DateUtil.parseLongToString(
+                millis,
+                DateUtil.DD_MM_YYYY
+            )
+            requireContext().toast(R.string.selected_date, dateString)
+        }
     }
 }

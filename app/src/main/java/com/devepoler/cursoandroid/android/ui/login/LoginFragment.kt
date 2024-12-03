@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.devepoler.cursoandroid.android.data.LoginResponse
-import com.devepoler.cursoandroid.android.data.bo.LoginFormBo
-import com.devepoler.cursoandroid.android.ui.extension.toast
+import com.devepoler.cursoandroid.android.core.data.LoginResponse
+import com.devepoler.cursoandroid.android.core.data.bo.LoginFormBo
+import com.devepoler.cursoandroid.android.core.extension.toast
 import com.devepoler.cursoandroid.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {

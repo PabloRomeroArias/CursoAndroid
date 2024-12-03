@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.data.bo
+package com.devepoler.cursoandroid.android.core.data.bo
 
 // BO -> Business Object
 data class LoginFormBo(

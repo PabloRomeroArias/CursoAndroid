@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.data.bo
+package com.devepoler.cursoandroid.android.core.data.bo
 
 data class UserBo(
     val name : String,

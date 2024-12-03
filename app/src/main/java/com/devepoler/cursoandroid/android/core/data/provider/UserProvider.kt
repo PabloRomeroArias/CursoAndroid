@@ -1,8 +1,8 @@
-package com.devepoler.cursoandroid.android.data.provider
+package com.devepoler.cursoandroid.android.core.data.provider
 
-import com.devepoler.cursoandroid.android.data.LoginResponse
-import com.devepoler.cursoandroid.android.data.bo.LoginFormBo
-import com.devepoler.cursoandroid.android.data.bo.UserBo
+import com.devepoler.cursoandroid.android.core.data.LoginResponse
+import com.devepoler.cursoandroid.android.core.data.bo.LoginFormBo
+import com.devepoler.cursoandroid.android.core.data.bo.UserBo
 
 class UserProvider {
     companion object {
