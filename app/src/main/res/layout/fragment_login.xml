@@ -48,7 +48,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/text_bt_login"
-        style="@style/Widget.Material3.Button"
         android:layout_marginTop="20dp"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/til_password"
