@@ -1,21 +1,44 @@
 <resources>
-    <!-- General -->
-    <string name="app_name">CursoAndroid</string>
+    <!-- Commons -->
+    <string name="app_name">Curso Android</string>
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
     <string name="back">Atrás</string>
     <string name="confirm">Confirmar</string>
+    <string name="guess">Invitado</string>
+    <string name="welcome">Hola, %1$s</string>
 
-    <!-- Login -->
+    <!-- Drawer menu -->
+    <string name="dialog_toggle_open">Abrir drawer</string>
+    <string name="dialog_toggle_close">Cerrar drawer</string>
+    <string name="android_basic_drawer_item">Android básico</string>
+    <string name="home_drawer_item">Home</string>
+    <string name="dialog_drawer_item">Diálogos</string>
+
+    <string name="android_advanced_drawer_item">Android avanzado</string>
+    <string name="coroutines_drawer_item">Corrutinas</string>
+
+    <!-- Login fragment -->
     <string name="hint_email">Email</string>
+    <string name="email_helper">devepoler@gmail.com</string>
     <string name="hint_password">Contraseña</string>
+    <string name="password_helper">111</string>
     <string name="text_bt_login">Login</string>
-    <string name="text_bt_guess">Invitado</string>
+    <string name="text_bt_guess">Acceder como invitado</string>
 
-    <!-- Home -->
-    <string name="home_welcome">Hola, %1$s</string>
-    <string name="home_dialog_title">Título</string>
-    <string name="home_dialog_message">Mensaje</string>
+    <!-- Home fragment -->
+    <string name="home_fragment_title">Home</string>
+    <string name="home_fragment_tv">Hogar, dulce hogar</string>
+
+    <!-- Dialog fragment -->
+    <string name="dialog_fragment_title">Diálogos</string>
+    <string name="bt_simple_dialog">Simple Dialog</string>
+    <string name="bt_single_choice_dialog">Single Choice Dialog</string>
+    <string name="bt_multiple_choice_dialog">Multiple Choice Dialog</string>
+    <string name="bt_time_picker_dialog">Time Picker</string>
+    <string name="bt_date_picker_dialog">Date Picker</string>
+    <string name="dialog_title">Título</string>
+    <string name="dialog_message">Mensaje</string>
 
     <string name="fruit_title">Fruta favorita</string>
     <string name="fruits_title">Frutas favoritas</string>

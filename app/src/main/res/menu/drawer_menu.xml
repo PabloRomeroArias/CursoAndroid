@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/android_basic_drawer_item"
+        android:title="@string/android_basic_drawer_item">
+        <menu>
+            <item
+                android:id="@+id/home_fragment"
+                android:title="@string/home_drawer_item"
+                android:checkable="true" />
+
+            <item
+                android:id="@+id/dialog_fragment"
+                android:title="@string/dialog_drawer_item"
+                android:checkable="true" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/android_advanced_drawer_item"
+        android:title="@string/android_advanced_drawer_item">
+        <menu>
+            <item
+                android:id="@+id/retrofit_fragment"
+                android:title="@string/coroutines_drawer_item"
+                android:checkable="true" />
+        </menu>
+    </item>
+</menu>
