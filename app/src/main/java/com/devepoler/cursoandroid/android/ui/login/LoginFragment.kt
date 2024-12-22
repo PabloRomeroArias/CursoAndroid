@@ -12,7 +12,7 @@ import com.devepoler.cursoandroid.R
 import com.devepoler.cursoandroid.android.core.data.LoginResponse
 import com.devepoler.cursoandroid.android.core.data.bo.LoginFormBo
 import com.devepoler.cursoandroid.android.core.extension.toast
-import com.devepoler.cursoandroid.android.ui.MainViewModel
+import com.devepoler.cursoandroid.android.ui.main.MainViewModel
 import com.devepoler.cursoandroid.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {

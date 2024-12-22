@@ -12,6 +12,11 @@
                 android:id="@+id/dialog_fragment"
                 android:title="@string/dialog_drawer_item"
                 android:checkable="true" />
+
+            <item
+                android:id="@+id/game_list_fragment"
+                android:title="@string/recycler_drawer_item"
+                android:checkable="true" />
         </menu>
     </item>
     <item
@@ -19,7 +24,7 @@
         android:title="@string/android_advanced_drawer_item">
         <menu>
             <item
-                android:id="@+id/retrofit_fragment"
+                android:id="@+id/coroutines_fragment"
                 android:title="@string/coroutines_drawer_item"
                 android:checkable="true" />
         </menu>

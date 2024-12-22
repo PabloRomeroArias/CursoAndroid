@@ -27,5 +27,14 @@
         android:label="fragment_dialog"
         tools:layout="@layout/fragment_dialog">
     </fragment>
-
+    <fragment
+        android:id="@+id/game_list_fragment"
+        android:name="com.devepoler.cursoandroid.android.ui.recycler.GameListFragment"
+        android:label="fragment_game_list"
+        tools:layout="@layout/fragment_game_list" />
+    <fragment
+        android:id="@+id/coroutines_fragment"
+        android:name="com.devepoler.cursoandroid.android.ui.coroutines.CoroutinesFragment"
+        android:label="CoroutinesFragment"
+        tools:layout="@layout/fragment_coroutines" />
 </navigation>

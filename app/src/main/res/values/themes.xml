@@ -13,9 +13,4 @@
         <item name="backgroundTint">@color/view_background</item>
         <item name="android:textColor">@color/button_text</item>
     </style>
-
-    <style name="ToolbarStyle" parent="Widget.Material3.Toolbar">
-        <item name="backgroundTint">@color/colorPrimaryDark</item>
-        <item name="background">@color/colorPrimaryDark</item>
-    </style>
 </resources>
