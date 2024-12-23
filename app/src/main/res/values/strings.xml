@@ -14,6 +14,7 @@
     <string name="android_basic_drawer_item">Android básico</string>
     <string name="home_drawer_item">Home</string>
     <string name="dialog_drawer_item">Diálogos</string>
+    <string name="game_list_drawer_item">Juegos</string>
 
     <string name="android_advanced_drawer_item">Android avanzado</string>
     <string name="coroutines_drawer_item">Corrutinas</string>
@@ -54,4 +55,7 @@
     <string name="date_picker_title">Selecciona fecha</string>
     <string name="selected_time">Hora seleccionada -> %1$s</string>
     <string name="selected_date">Fecha seleccionada -> %1$s</string>
+
+    <!-- GameList fragment -->
+    <string name="game_list_fragment_title">Juegos</string>
 </resources>
