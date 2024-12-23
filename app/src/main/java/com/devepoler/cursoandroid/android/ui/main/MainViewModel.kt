@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.ui
+package com.devepoler.cursoandroid.android.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

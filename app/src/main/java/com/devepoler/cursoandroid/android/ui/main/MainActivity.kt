@@ -1,4 +1,4 @@
-package com.devepoler.cursoandroid.android.ui
+package com.devepoler.cursoandroid.android.ui.main
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -66,10 +66,13 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             navView.setNavigationItemSelectedListener { item ->
                 drawerLayout.close()
-                when (item.itemId) {
-                    R.id.home_fragment -> setFragmentTitle(R.string.home_fragment_title)
-                    R.id.dialog_fragment -> setFragmentTitle(R.string.dialog_fragment_title)
+                val resTitle = when (item.itemId) {
+                    R.id.home_fragment -> R.string.home_fragment_title
+                    R.id.dialog_fragment -> R.string.dialog_fragment_title
+                    R.id.game_list_fragment -> R.string.game_list_fragment_title
+                    else -> R.string.app_name
                 }
+                setFragmentTitle(resTitle)
                 NavigationUI.onNavDestinationSelected(item, navController)
                 true
             }

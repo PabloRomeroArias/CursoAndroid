@@ -12,6 +12,11 @@
                 android:id="@+id/dialog_fragment"
                 android:title="@string/dialog_drawer_item"
                 android:checkable="true" />
+
+            <item
+                android:id="@+id/game_list_fragment"
+                android:title="@string/game_list_drawer_item"
+                android:checkable="true" />
         </menu>
     </item>
     <item
